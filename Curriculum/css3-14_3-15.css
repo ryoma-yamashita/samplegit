@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+}
+/* ここに書かれた文字はコメントとして処理されます */
+/* Windowsでは「ctrl+/」がショートカット */
+
+.flex {
+  display: flex;
+}
+
+.red--box {
+  width: 300px;
+  height: 300px;
+  background: red;
+  margin: 50px;
+}
+
+.green--box {
+  width: 300px;
+  height: 300px;
+  background: green;
+}
+
+.gray--box {
+  width: 300px;
+  height: 300px;
+  background: gray;
+  padding: 50px;
+}
