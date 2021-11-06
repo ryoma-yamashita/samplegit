@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*  body {
+  padding: 8% 25%;
+  margin: 0;
+}
+
+p {
+margin: 0;
+background-color: black;
+color: white;
+text-align: justify;
+}
+
+div {
+  border: dotted 10px tomato;
+}  */
+
+/* 装飾の練習 */
+/*  p {
+  padding: 10px 20px;
+  margin: 20px 10px;
+}  */
+
+body {
+  font: 1.1em/1.3 sans-serif;
+  margin: 0;
+  padding: 0 10%;
+}
+
+nav {
+  margin: 1.5em 0;
+  /* visibility: visible; */
+}
+a {
+  display: block;
+}
+
+
+div {
+  padding: 10px 20px;
+  background-color: #eee;
+  border: 10px solid #ddd;
+  max-width: 400px;
+  max-height: 300Px;
+  overflow: scroll;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}

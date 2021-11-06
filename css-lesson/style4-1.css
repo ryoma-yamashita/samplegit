@@ -1,0 +1,31 @@
+@charset "UTF-8";
+body {
+  padding: 1em 6em;
+}
+
+/* fontシリーズの練習 */
+p {
+  font-style: oblique;
+
+  /* 行間の指定の練習 */
+  line-height: 1.5em;
+
+  /* text-alignの練習 */
+  text-align: left;
+}
+
+
+h1 { font: italic small-caps lighter 2.5em/2.7em sans-serif; }
+
+/* 装飾の練習 */
+ul {
+  list-style-type: none;
+}
+ol {
+  list-style: lower-alpha;
+  list-style-position: inside;
+}
+li {
+  border: solid 1px;
+  margin-bottom: 5px;
+}
