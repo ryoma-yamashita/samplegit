@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESSON 3-11_3-13</title>
+    <!--Styleタグを用意しLiタグの文字を青にします-->
+    <style>
+      li {
+        color: blue;
+      }
+    </style>
+    <!--Cssファイルを読み込みh2タグの文字を緑にします-->
+    <link rel="stylesheet" href="css3-12_3-13.css">
+  </head>
+  <body>
+    <header>
+      <!--HTMLにCSSを直接書く-->
+      <!--h1タグの文字を赤にします-->
+      <h1 style="color: red;">Headerタグは・・・</h1>
+      <p>タイトルやロゴなどページを象徴する情報をページ上部にグループ化する際に使用する</p>
+      <nav>
+        <ul>
+          <li>Navタグは・・・</li>
+          <li>ページ内のナビゲーションを表示する際に使用する</li>
+          <li>適切なページへ移動できるようリンクを使うことが多い</li>
+          <li>リストタグを使い各ページへナビすることが多い</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Mainタグは・・・</h2>
+      <p>ページの主要情報をグループ化する際に使用する</p>
+      <!--Articleタグに「area」id名を設定し、幅を1100px border marginを0に-->
+      <article id="area">
+        <h3>Articleタグは・・・</h3>
+        <p>日本語で「記事」という意味、ブロックとして独立して成り立つ際に使用する</p>
+      </article>
+      <!--Sectionタグに「text-white」を設定し、background-colorをblack colorをwhiteに-->
+      <section class="text-white">
+        <div>
+          <h3>Sectionタグは・・・</h3>
+          <p>Articleタグとは違い、いくつかの内容を含みブロックとして成り立つ際に使用する</p>
+        </div>
+        <div>
+          <h3>Divタグは・・・</h3>
+          <p>各要素内の内容をグループ化する際に使用する</p>
+        </div>
+      </section>
+    </main>
+    <aside>
+      <h5>Asideタグは・・・</h5>
+      <p>Mainタグの内容と関連性の低い情報のグループをブロック化する際に使用する</p>
+    </aside>
+    <footer>
+      <p><small>Footerタグは・・・</small></p>
+      <p><small>ページ下部にコピーライト、SNSへのリンク先などをブロック化する際に使用する</small></p>
+    </footer>
+  </body>
+</html>

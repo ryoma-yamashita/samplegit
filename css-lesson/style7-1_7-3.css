@@ -1,0 +1,27 @@
+div {
+  margin: 50px auto;
+  font: 1.1em/1.5 sans-serif;
+  box-sizing: border-box;
+}
+
+/* .sketch-img {
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+  background: url('https://source.unsplash.com/100x100/?dog') no-repeat 350px 200px, url('https://source.unsplash.com/200x200/?flower') no-repeat 100px 100px, url('https://source.unsplash.com/400x400/?happy');
+  background-size: 250px 200px, 50% 45%, 110%;
+} */
+
+html {
+  height: 100%;
+}
+
+.box {
+  width: 80%;
+  height: 500px;
+  padding: 30px;
+  background: url('https://source.unsplash.com/random') no-repeat center;
+  border: 15px solid rgba(35, 66, 97, .6);
+  background-size: cover;
+  background-clip: content-box;
+}

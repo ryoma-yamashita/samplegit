@@ -1,0 +1,37 @@
+body {
+  font: 1.1em/1.5 sans-serif;
+  padding-top: 20px;
+}
+.main {
+  border: 1px solid;
+  margin: auto;
+  padding: 10px 20px 20px;
+  width: 760px;
+}
+
+/* 特殊なセレクタを使ってみる */
+h2 + p {
+  color: black;
+}
+
+/* 属性セレクタを指定してみる */
+[href="#"] {
+  background-color: crimson;
+  color: azure;
+  padding: 5px;
+}
+
+/* 擬似要素を使ってみる */
+a:link {
+  color: aqua;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  text-decoration: none;
+  background-color: lightgray;
+}
+:focus {
+  background-color: yellow;
+}
