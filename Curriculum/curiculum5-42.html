@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <head></head>
+    <main>
+      <button id="sample">jQuery</button>
+      <script>
+        $(function () {
+          $("#sample").on('click', function () {
+            const result = "ボタンが押されました！";
+            console.log(result);
+          });
+        });
+      </script>
+
+      <h1>jQuery-slim.fileまとめ</h1>
+      <p>
+        jQuery-slim.fileは通常版、min版からAjaxやアニメーション関連機能が削除された究極の軽量化バージョン。<br>
+        <br>
+        AjaxとはAsynchronous JavaScript + XML（エイシンクロナス・ジャヴァスクリプト・アンド・エックスエムエル）の略。<br>
+        JavaScriptの非同期通信機能を使って、XML形式のデータをWebサーバから取得しておく実装方式の呼び名。<br>
+        Ajaxは便利な機能ではあるが、少々煩雑で初心者にはなかなか扱いづらい、そんな扱いづらいAjaxを扱いやすくする機能を提供したのも<br>
+        jQueryの功績ではあるが、需要の増加に伴って最新のブラウザではより高機能で扱いやすい「Fetch API」という機能が標準搭載されるようになってきている。<br>
+        <br>
+        アニメーション関連機能については、CSS3でアニメーション関連のプロパティ"transition"や"animate"などが追加され<br>
+        ページ上で要素をアニメーションさせることが容易になった。CSSアニメーションはブラウザ自身が動作を制御してくれるため負担が少なく<br>
+        レスポンシブデザインにも対応しやすいという利点がある。<br>
+        <br>
+        以上の二つの時代背景からわざわざjQueryでやらなくてもよくなった機能が削除された。
+      </p>
+      <h1>「.on('click', function () {});」と「.click(function () {});」の違い</h1>
+      <p>
+        jQueryの途中から追加されたHTML要素を検出できるかどうかに大きな違いがある。<br>
+        clickイベントでは、ボタンが複数ある場合、一方のみにイベントが適用され、複数のイベントの設定には都度記述する必要があるが<br>
+        on(click)を使用することで一つのボタンに複数のイベント、または複数のボタンにそれぞれ別のイベントを定義することが可能。<br>
+        on()メソッドの中には、live(),bind(),delegate()メソッドが内包されており様々なイベントを定義することが可能であり<br>
+        on()メソッドを使用することでコードが冗長にならずに済むことができるようになる。
+      </p>
+    </main>
+    <footer></footer>
+  </body>
+</html>
