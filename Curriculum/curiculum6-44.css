@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* Sass記法 */
+/* .main
+  background-color: #0000ff
+  color: #fff
+
+  &_content
+    background-color: #00ff00
+
+  &_secContent
+    background-color: #ff0000
+ */
+
+/* SCSS記法 */
+/* .main {
+  background-color: #0000ff;
+  color: #fff;
+
+  &_content {
+    background-color: #00ff00;
+  }
+
+  &_secContent {
+    background-color: #ff0000;
+  }
+} */
+
+/* 通常のCSS記法 */
+body {
+  line-height: 150%;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: square;
+}
+
+li {
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+span {
+  color: #0000ff;
+}
+
+.main {
+  background-color: #0000ff;
+  color: #fff;
+}
+
+.main_content {
+  background-color: #00ff00;
+}
+
+.main_secContent {
+  background-color: #ff0000;
+  color: #fff;
+}
