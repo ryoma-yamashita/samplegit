@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulpを使用する</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../Normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <h1 class="title">require()どう言った時に使いますか？</h1>
+    <p>
+      const 変数 = require('パッケージ名')でインストールされた「'パッケージ名'」のモジュールを.jsファイルへ読み込み、実行する際に使用する。
+    </p>
+    <h1 class="title-one">gulp.task()どう使いますか？また、どう言った仕様ですか？</h1>
+    <p>
+      タスクを定義するためのメソッド。タスク名とタスクを実行した時の処理を書いていく。<br>
+      gulp.task(name, [deps], fn) --- 例）gulp.task('taskname', function() { タスクの処理を書いていく }); と記述していく。
+    </p>
+    <ul>
+      <li>name:実行するタスク名。'default'とすることで、タスク実行時のタスク名を省略が可能。</li>
+      <li>deps:タスクを実行する前に完了しておきたい別のタスク名を配列記述し、タスクを実行する順番を保証したい時に指定。</li>
+      <li>fn:実行するタスク内容。一般的に"gulp.src().pipe(someplugin())"の形式で書いていく。実行タスク内に必ずreturnを記述する。</li>
+    </ul>
+    <h1 class="title-two">タスクの対象はどのように指定すれば良いですか？</h1>
+    <p>
+      gulp.src('取得するファイル')と記述することでタスクを実行するファイルを指定する。複数のファイルを指定することも可能。
+    </p>
+    <h1 class="title-three">対象のタスクに対して複数処理をしたい時はどうすれば良いですか？</h1>
+    <p>
+      .pipe('処理内容')と記述することで処理内容をつなげていく。.pipe()メソッドはいくらでもつなげることが可能なので、連続して複数の処理を実装することができる。
+    </p>
+    <h1 class="title-four">watch機能はどう言ったものですか？</h1>
+    <p>
+      ファイルの更新を検知し、指定されたタスクの実行を自動的に行う機能。gulp.watch('監視するファイル', 処理内容)と記述することで指定したファイルの状態を監視し更新があった場合、処理内容に記述されたタスクを自動で行う。
+    </p>
+  </body>
+</html>
