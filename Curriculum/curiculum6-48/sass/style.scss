@@ -1,0 +1,33 @@
+.main {
+  // 足し算
+  width: 500px + 100;
+  // 引き算
+  width: 700px - 100;
+  // 掛け算
+  width: 5px * 2;
+  // 割り算
+  width: calc(20px / 2);
+  // 現在除算を行う場合は、math.div()もしくはcalc(){こちらのほうが使いやすい}と記述する
+  // ()のみでは演算はされるが、ターミナル上にエラー表示がされる
+
+  // 割り算のあまり
+  width: 10px % 3;
+}
+
+// 課題
+$basic_value: 500px;
+.title {
+  // 加算
+  height: 350px + 150;
+  // 減算
+  height: $basic_value - 100;
+  // 乗算
+  height: $basic_value * 2;
+  // 除算
+  height: calc(500px / 20);
+  height: calc($basic_value / 10);
+  height: calc(500px / 20) + 25;
+  // 除算はcalc()で囲む
+  // あまり
+  height: $basic_value % 7;
+}
