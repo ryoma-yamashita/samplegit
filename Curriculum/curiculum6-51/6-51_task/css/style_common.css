@@ -1,0 +1,62 @@
+.inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.line_sns_btn {
+  display: block;
+  padding: 20px 30px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #00B900;
+  text-decoration: none;
+  text-align: center;
+  width: 700px;
+  margin: 15px 0;
+}
+
+.instagram_sns_btn {
+  display: block;
+  padding: 20px 30px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #CF2E92;
+  text-decoration: none;
+  text-align: center;
+  width: 700px;
+  margin: 15px 0;
+}
+
+.facebook_sns_btn {
+  display: block;
+  padding: 20px 30px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #71d0f2;
+  text-decoration: none;
+  text-align: center;
+  width: 700px;
+  margin: 15px 0;
+}
+
+.twitter_sns_btn {
+  display: block;
+  padding: 20px 30px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #1DA1F2;
+  text-decoration: none;
+  text-align: center;
+  width: 700px;
+  margin: 15px 0;
+}
+
+p {
+  margin: 0 20%;
+}

@@ -50,7 +50,7 @@
   padding: $padding;
 }
 .main-box {
-  @include boxContent;
+  @include boxContent();
   background: #ff0000;
 }
 // 複数指定した引数を別途指定
