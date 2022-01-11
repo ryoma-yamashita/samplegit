@@ -1,0 +1,119 @@
+.main-box, .sub-box {
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+
+.is-flex, .sub-box {
+  display: flex;
+}
+
+.main-box, .sub-box {
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+
+.is-flex, .sub-box {
+  display: flex;
+}
+
+.main-box, .sub-box {
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+
+.mini-box-area, .sub-box-content {
+  width: 100px;
+  height: 100px;
+}
+
+.sub-box {
+  position: relative;
+}
+.sub-box-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0008f3;
+}
+
+.main-box, .sub-box {
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+
+@media screen and (max-width: 1199px) {
+  .main-box, .sub-box {
+    width: 300px;
+    height: 300px;
+    background: #ff0000;
+  }
+}
+div {
+  color: #000;
+}
+
+.class {
+  color: #000;
+}
+
+#selectorID {
+  color: #000;
+}
+
+.class1.class2 {
+  color: #000;
+}
+
+input[type=text] {
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+p:first-line {
+  color: #000;
+}
+
+.item p {
+  margin: 25px;
+}
+
+#main > article {
+  margin: 25px;
+}
+
+h2 + h3 {
+  margin: 25px;
+}
+
+h3 ~ h3 {
+  margin: 25px;
+}
+
+.main, .sub2, .sub1 {
+  margin: 25px;
+}
+
+.green_box, .red_box, .blue_box {
+  width: 50px;
+  height: 50px;
+  margin: 50px;
+}
+
+.blue_box {
+  background-color: #0000ff;
+}
+
+.red_box {
+  background-color: #ff0000;
+}
+
+.green_box {
+  background-color: #00ff00;
+}

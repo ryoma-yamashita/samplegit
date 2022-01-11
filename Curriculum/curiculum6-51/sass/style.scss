@@ -1,0 +1,139 @@
+// @ifを使った条件分岐
+$floatValue: true;
+
+@if $floatValue {
+  .is-float {
+    float: left;
+  }
+}
+@else {
+  .is-float {
+    float: right;
+  }
+}
+
+// 比較条件の追加
+$bgColor: 1;
+
+@if $bgColor == 0 {
+  // ===のような厳密な比較はできないので注意
+  .bg-color {
+    background-color: red;
+  }
+}
+
+@else if $bgColor == 1 {
+  .bg-color {
+    background-color: blue;
+  }
+}
+
+@else {
+  .bg-color {
+    background-color: green;
+  }
+}
+// 論理演算子を使う場合は文字で記述する(and(&&)、or(||)、not(!))
+// 注意点
+// if文が使えるのは一見便利に見えますが、変数などを使用して比較条件を作る場合、その変数は動的に値を変
+// える必要があります。
+// 理由は今回のような場合は値が上書きされることはないので誰かが手を加ない限りは通る条件が変わりません。
+// その都度人の手によって値が書き換えるのはあまり意味がないので動的に変える必要があります。
+// ロジックを組めばそれも可能かも知れませんがコーディングをやっている方が全員プログラミングに精通し
+// ているとは限らないので属人化するものを作るくらいならメンテナンス性に⻑けた書き方を取るのも1つの方法です。
+
+// @forを使った繰り返し処理
+@for $value from 1 through 3 {
+  .through-sample-#{$value * 10} {
+    margin: 10px * $value;
+  }
+}
+// throughの終了は指定した「数値を含む」
+@for $value from 1 to 3 {
+  .to-sample-#{$value * 10} {
+    margin: 10px * $value;
+  }
+}
+// toの終了は指定した「数値を含まない」
+
+// @whileを使った繰り返し処理
+$value: 20;
+
+@while $value > 0 {
+  .while-sample-#{$value} {
+    margin: $value + px;
+  }
+  $value: $value - 10;
+}
+
+// @eachを使ったリスト（配列）の要素に対する繰り返し処理
+// 配列
+$bgColor:#acc1ed,#dc7668,#71d0f2;
+// オブジェクト
+$map: (
+  "header": #acc1ed,
+  "main": #dc7668,
+  "footer": #71d0f2,
+);
+
+$bgColor:#acc1ed,#dc7668,#71d0f2;
+
+@each $value in $bgColor {
+  .bg-color {
+    background: $value;
+  }
+}
+
+$map: (
+  "header": #acc1ed,
+  "main": #dc7668,
+  "footer": #71d0f2,
+);
+
+@each $key, $value in $map {
+  .#{$key}-bg-color {
+    background: $value;
+  }
+}
+
+// 繰り返し処理の実装のコツ
+// 複雑な処理を行う際にエラーが起きてしまうことがあった場合、
+// 引数の中に何が入っているかを確認しないまま解決しようとするのはかなり苦労することになる
+// そういった時は@debugを使用して調査する
+// @debug 変数名;としてコンパイルを実行するとコンソールに対象の中身を表示させることが可能
+// これで変数に期待した値が入っているか確認することが可能となる
+
+// 課題1
+$width: 700px;
+
+@mixin conditions_box {
+  margin: 0 auto;
+  height: 1000px;
+  width: $width;
+  @if $width > 800px {
+    background-color: #71d0f2;
+  } @else {
+    background-color: #dc7668;
+  }
+}
+
+.sample_box {
+  @include conditions_box()
+}
+
+// コンパイル結果
+// $width: 1000px;の場合
+// .sample_box {
+//   margin: 0 auto;
+//   height: 1000px;
+//   width: 1000px;
+//   background-color: #71d0f2; <= 条件によってカラー値の変更
+// }
+
+// $width: 700px;の場合
+// .sample_box {
+//   margin: 0 auto;
+//   height: 1000px;
+//   width: 700px;
+//   background-color: #dc7668; <= 条件によってカラー値の変更
+// }

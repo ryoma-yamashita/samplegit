@@ -1,0 +1,54 @@
+.main {
+  font-size: 20px;
+  &-content {
+  font-size: 14px;
+  }
+  &_secContent {
+  background-color: #ff0000;
+  }
+}
+
+.item1 {
+  width: 100px;
+  &:hover {
+      width: 50px;
+  }
+}
+
+.box {
+  &-a {
+      background: #ffffff;
+  }
+  &-b {
+      background: #000000;
+  }
+}
+
+.title {
+  font-size: 32px;
+  background-color: aqua;
+  &-one {
+    font-size: 34px;
+    background-color: aquamarine;
+  }
+  &-two {
+    font-size: 36px;
+    background-color: chartreuse;
+  }
+  &-three {
+    font-size: 38px;
+    background-color: crimson;
+  }
+  &-four {
+    font-size: 40px;
+    background-color: deepskyblue;
+  }
+}
+
+p {
+  line-height: 150%;
+}
+
+ul {
+  line-height: 150%;
+}

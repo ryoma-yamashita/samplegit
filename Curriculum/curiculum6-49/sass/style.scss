@@ -1,0 +1,211 @@
+// .main-box {
+//   width: 300px;
+//   height: 300px;
+//   background: #ff0000;
+// }
+
+// .sub-box {
+//   @extend .main-box;
+//   // .main-boxのプロパティを継承
+// }
+// // 上記記述であれば直接下記のように記述するほうが早い
+// // .main-box, .sub-box {
+// //   width: 300px;
+// //   height: 300px;
+// //   background: #ff0000;
+// // }
+
+// .is-flex {
+//   display: flex;
+// }
+// .main-box {
+//   width: 300px;
+//   height: 300px;
+//   background: #ff0000;
+// }
+// .sub-box {
+//   @extend .main-box;
+//   @extend .is-flex;
+// }
+
+// .is-flex {
+//   display: flex;
+// }
+// .main-box {
+//   width: 300px;
+//   height: 300px;
+//   background: #ff0000;
+// }
+// .mini-box-area {
+//   width: 100px;
+//   height: 100px;
+// }
+// .sub-box {
+//   position: relative;
+//   @extend .main-box;
+//   @extend .is-flex;
+//   &-content {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background: #0008f3;
+//     @extend .mini-box-area;
+//   }
+// }
+
+.main-box {
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+@media screen and (max-width: 1199px) {
+  .sub-box {
+  @extend .main-box;
+  }
+}
+// 現在エラー表記されず、@mediaの記述がコンパイルされないので注意が必要
+// 上記をコンパイルした結果
+// .main-box, .sub-box {
+//   width: 300px;
+//   height: 300px;
+//   background: #ff0000;
+// }
+
+// コンパイルされる記述
+@media screen and (max-width: 1199px) {
+  .main-box {
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+  .sub-box {
+  @extend .main-box;
+  }
+}
+// 上記の結果
+// @media screen and (max-width: 1199px) {
+//   .main-box, .sub-box {
+//     width: 300px;
+//     height: 300px;
+//     background: #ff0000;
+//   }
+// }
+
+// @extendが使えるセレクター
+// タイプセレクタ
+div {
+  color: #000;
+}
+
+// クラスセレクタ
+.class {
+  color: #000;
+}
+
+// IDセレクタ
+#selectorID {
+  color: #000;
+}
+
+// 連結セレクタ
+.class1.class2 {
+  color: #000;
+}
+
+// 属性セレクタ
+input[type="text"] {
+  color: #000;
+}
+
+// 擬似セレクタ
+a:hover {
+  color: #000;
+}
+
+// 擬似要素
+p:first-line {
+  color: #000;
+}
+
+// @extendが使えない例
+// 子孫セレクタ
+.item p {
+  margin: 25px;
+}
+
+// 子セレクタ
+#main > article {
+  margin: 25px;
+}
+
+// 隣接セレクタ
+h2 + h3 {
+  margin: 25px;
+}
+
+//　間接セレクタ
+h3 ~ h3 {
+  margin: 25px;
+}
+
+
+
+// @extendの注意点
+.main {
+  margin: 25px;
+}
+
+.sub1 {
+  @extend .main;
+}
+
+.sub2 {
+  @extend .main;
+}
+// 上記のようにスタイルを継承し続けた場合
+// [.main, .sub2, .sub1] {
+  // []内のグルーピングされたセレクタが、ひたすらに増えていく
+  // あまりに膨大な量のグルーピングになってしまった場合、どのスタイルが当たっているのか把握に時間がかかってしまう
+//   margin: 25px;
+// }
+// また、もし.mainのスタイルを、継承元としての役割として使いたい場合がある
+// これを解決するのが、@extend専用のプレースホルダーセレクタを用意すること
+%box {
+  width: 50px;
+  height: 50px;
+  margin: 50px;
+}
+
+.blue_box {
+  @extend %box;
+  background-color: #0000ff;
+}
+
+.red_box {
+  @extend %box;
+  background-color: #ff0000;
+}
+
+.green_box {
+  @extend %box;
+  background-color: #00ff00;
+}
+// 上記をコンパイルすると
+// [.green_box, .red_box, .blue_box] {
+//   width: 50px;
+//   height: 50px;
+//   margin: 50px;
+// }
+
+// .blue_box {
+//   background-color: #0000ff;
+// }
+
+// .red_box {
+//   background-color: #ff0000;
+// }
+
+// .green_box {
+//   background-color: #00ff00;
+// }
+// となる。[]内に.boxの表記はなく%boxのスタイルだけを他のセレクタへ継承している

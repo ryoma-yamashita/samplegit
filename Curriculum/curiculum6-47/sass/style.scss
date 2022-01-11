@@ -1,0 +1,65 @@
+// 変数
+
+// // 変数に値を定義
+// $global-value: 50px;
+// // この場合の変数はグローバルな変数となるので別クラスの値としても利用可能
+// .main {
+//   width: 500px;
+//   height: 500px;
+//   // margin, paddingに同じ値を適用するので値の部分に変数を記述
+//   margin: $global-value;
+//   padding: $global-value;
+//   background: #333;
+// }
+
+// .main {
+//   // 変数に値を定義
+//   $scope-value: 50px;
+//   width: 500px;
+//   height: 500px;
+//   // margin, paddingの値に変数で代入
+//   margin: $scope-value;
+//   padding: $scope-value;
+//   background: #333;
+//   }
+//   .sub {
+//   width: 500px;
+//   height: 500px;
+//   // 変数を再代入
+//   margin: $scope-value;
+//   padding: $scope-value;
+//   // ターミナルに"Error: Undefined variable."の表示
+//   // 変数に値がありませんという内容のエラー
+//   // $scope-valueは.main内のスコープで定義された変数となるため、.sub内では値の再利用はできない
+//   background: #333;
+// }
+
+// 変数名の宣言ルール（エラーの原因となるので注意）
+// 使用できるパターン
+// ・半角英語
+// ・全角数字、英語、日本語
+// ・"_"アンダースコア、"-"ハイフンから始まる
+// 使用できないパターン
+// ・半角数字から始まる
+// ・＠などの記号
+// ・ハイフンの連続使用から始まる(連続したアンダースコアの使用は問題なし)
+
+// セレクター名、ファイルパスを変数として使用
+// 変数へそれぞれを定義
+$parent-name: '.main';
+$img-path: './img/';
+
+// #{}で変数を補完しない場合エラーとなるので要注意
+#{$parent-name} {
+  $scope-value: 50px;
+  width: 500px;
+  height: 500px;
+  margin: $scope-value;
+  padding: $scope-value;
+  // 画像は用意してないのでコメントアウトしています
+  // background: url(${$img-path}img.png);
+}
+
+// 注意点
+// セレクター名を変数で定義できるからと言って、むやみに変数名を使用するのは控える
+// 変数名へ代入されているセレクター名を探すことから始まり把握に時間がかかってしまう
