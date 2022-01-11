@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.main-box {
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+
+.sub-box {
+  width: 300px;
+  height: 300px;
+  background: #0011ff;
+}
+
+.main-box {
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+
+.sub-box {
+  width: 100px;
+  height: 100px;
+  background: #0011ff;
+}
+
+.main-box {
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+
+.sub-box {
+  width: 100px;
+  height: 100px;
+  background: #0011ff;
+}
+
+.main-box {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 0;
+  background: #ff0000;
+}
+
+.sub-box {
+  width: 100px;
+  height: 100px;
+  margin: 0 50px;
+  padding: 20px;
+  background: #0011ff;
+}
+
+.main-box .sub-box {
+  width: 100px;
+  height: 100px;
+  margin: 0 50px;
+  padding: 20px;
+  background: #0011ff;
+}
+
+.item image {
+  float: left;
+}
+@media screen and (max-width: 768px) {
+  .item image {
+    /* この部分で@media screen and (max-width: 768px)と置き換わる */
+    float: none;
+    /* この部分が@contentの内容と置き換わる */
+  }
+}
+.item .text {
+  overflow: hidden;
+  margin-left: 15px;
+}
+@media screen and (max-width: 768px) {
+  .item .text {
+    margin-left: 0;
+  }
+}

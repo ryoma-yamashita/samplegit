@@ -1,57 +1,57 @@
-.main-box {
-  width: 300px;
-  height: 300px;
-  background: #ff0000;
-}
-
-.sub-box {
-  @extend .main-box;
-  // .main-boxのプロパティを継承
-}
-// 上記記述であれば直接下記のように記述するほうが早い
-// .main-box, .sub-box {
+// .main-box {
 //   width: 300px;
 //   height: 300px;
 //   background: #ff0000;
 // }
 
-.is-flex {
-  display: flex;
-}
-.main-box {
-  width: 300px;
-  height: 300px;
-  background: #ff0000;
-}
-.sub-box {
-  @extend .main-box;
-  @extend .is-flex;
-}
+// .sub-box {
+//   @extend .main-box;
+//   // .main-boxのプロパティを継承
+// }
+// // 上記記述であれば直接下記のように記述するほうが早い
+// // .main-box, .sub-box {
+// //   width: 300px;
+// //   height: 300px;
+// //   background: #ff0000;
+// // }
 
-.is-flex {
-  display: flex;
-}
-.main-box {
-  width: 300px;
-  height: 300px;
-  background: #ff0000;
-}
-.mini-box-area {
-  width: 100px;
-  height: 100px;
-}
-.sub-box {
-  position: relative;
-  @extend .main-box;
-  @extend .is-flex;
-  &-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #0008f3;
-    @extend .mini-box-area;
-  }
-}
+// .is-flex {
+//   display: flex;
+// }
+// .main-box {
+//   width: 300px;
+//   height: 300px;
+//   background: #ff0000;
+// }
+// .sub-box {
+//   @extend .main-box;
+//   @extend .is-flex;
+// }
+
+// .is-flex {
+//   display: flex;
+// }
+// .main-box {
+//   width: 300px;
+//   height: 300px;
+//   background: #ff0000;
+// }
+// .mini-box-area {
+//   width: 100px;
+//   height: 100px;
+// }
+// .sub-box {
+//   position: relative;
+//   @extend .main-box;
+//   @extend .is-flex;
+//   &-content {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background: #0008f3;
+//     @extend .mini-box-area;
+//   }
+// }
 
 .main-box {
   width: 300px;
