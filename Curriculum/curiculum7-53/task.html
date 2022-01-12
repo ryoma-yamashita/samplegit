@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curiculum7-53 課題</title>
+    <link rel="stylesheet" href="Normalize.css">
+    <link rel="stylesheet" href="curiculum7-53.css">
+  </head>
+  <body>
+    <h1>トランスパイルとコンパイルの違いを説明してください</h1>
+    <p>
+      ・・・コンパイルとは「比較すると高水準な言語のソースコード」を受け取り、「比較すると低水準な言語の目的コード」を結果として出力すること<br>
+      トランスパイルとは受け取ったプログラミング言語で書かれたソースコードを、同程度の水準のコードとして出力すること。<br>
+      例を挙げるとすると、SASS、SCSSからCSSへ変換する場合は。SASSで記述されたソースコードはCSSの機能拡張されたものとなり.sass、.scssファイルのままではHTMLへの読み込みはできない<br>
+      なのでHTMLが読み込むことができるように.cssへ変換する必要がある。<br>
+      Sass、Scss（高機能、高水準である言語のソースコード）をCss（Sass、Scssと比較すると低水準の言語の目的コード）へ変換する、<br>
+      これが<span>コンパイル</span>である。<br>
+      <br>
+      トランスパイルの例としては、現在のJavaScript（ECMAScript）の最新バージョンはECMAScript 2021（ES2021(別名ES12)）であり、このバージョンで記述されたソースコードを<br>
+      全てのブラウザが対応しているとは限らない(対応していないことのほうが多い)なので、全てのブラウザで対応されているバージョンへ変換する必要がある。<br>
+      ES2021（ES12）をES5（バージョンを落とす変換であるので、高いものから低いものへと考えそうだが同言語のアップデートされた内容をアップデート前の内容に変換するので水準としては同程度となる）<br>
+      への変換することを<span>トランスパイル</span>と呼ぶ。ソース・トゥ・ソースコンパイルと呼ばれることもある。
+    </p>
+  </body>
+</html>
